@@ -330,7 +330,7 @@ function Homepage() {
                     <div className="text-block">CADASTRAL SURVEYING</div>
                     <h4>Boundary opening survey of NARO land and emplacement of pillars</h4>
                     <div className="project-location-year">
-                    <p><i className="fa fa-map-pin" aria-hidden="true"></i> Sheema, Uganda</p>
+                    <p><i className="fa fa-map-pin" aria-hidden="true"></i> Apac, Uganda</p>
                     <p><i className="fa fa-calendar" aria-hidden="true"></i> 2022</p>
                     </div>
                 </div>
