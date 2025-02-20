@@ -2654,7 +2654,9 @@
     line-height: 1.5;
   }
 
-  
+  .services-element h3 {
+      color: var(--default-color);
+  }
 
   .services-element ul li span {
     font-size: 18px;
