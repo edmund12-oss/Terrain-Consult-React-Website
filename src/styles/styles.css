@@ -781,10 +781,18 @@
     text-align: center;
     transition: opacity 0.5s ease-in-out;
   }
+     
+  .about-home-page {
+    gap: 50px;  
+  }
 
   .about-home-item p {
     font-size: 16px;
   }
+
+    
+
+
   
 }
 
