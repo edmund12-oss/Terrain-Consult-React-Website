@@ -385,7 +385,7 @@ function Homepage() {
                     <div className="section-title-element">
                         <h2>OUR CORE TEAM <i className="fa fa-users" aria-hidden="true"></i></h2>
                     </div>
-                    <h3>Meet The Owners Of Terrain Consult</h3>
+                    <h3>Meet The Top Management at Terrain Consult</h3>
                 </div>
                 <div className="team-partner">
                     <div className="partner">
