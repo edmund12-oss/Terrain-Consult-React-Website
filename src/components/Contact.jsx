@@ -119,7 +119,7 @@ const Contact = () => {
 <div className="footer-contact">
     <p>Ambassador house</p>
     <p>Along Kampala road</p>
-    <p className="mt-3"><strong>Phone:</strong> <span>+256 701 601 604</span></p>
+    <p className="mt-3"><strong>Phone:</strong> <span>+256 767 655 978</span></p>
     <p><strong>Email:</strong> <span>terrain_consult@yahoo.com</span></p>
 </div>
 </div>
