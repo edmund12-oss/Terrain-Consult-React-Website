@@ -34,6 +34,8 @@ import img_rt_23_three from "../assets/rt_23_three.JPG"
 import img_rt_24_one from "../assets/rt_24_one.JPG"
 import img_rt_24_two from "../assets/rt_24_two.JPG"
 import img_rt_24_three from "../assets/rt_24_three.JPG"
+import happy01 from "../assets/HAPPY.png"
+import pennie01 from "../assets/PENNIE.jpg"
 
 const Aboutpage = () => {
 
@@ -348,13 +350,13 @@ const Aboutpage = () => {
        </div> 
 
        <div className="team-member">
-         <img src={alvin} className="team-member-img" alt=""/>
+         <img src={happy01} className="team-member-img" alt=""/>
          <h4>KABALIISA EDITH HAPPY</h4>
          <p>Surveyor</p>
        </div>   
 
        <div className="team-member">
-         <img src={alvin} className="team-member-img" alt=""/>
+         <img src={pennie01} className="team-member-img" alt=""/>
          <h4>ARIMPA PENLOPE</h4>
          <p>Surveyor</p>
        </div> 
