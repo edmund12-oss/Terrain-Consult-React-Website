@@ -348,6 +348,18 @@ const Aboutpage = () => {
        </div> 
 
        <div className="team-member">
+         <img src={alvin} className="team-member-img" alt=""/>
+         <h4>KABALIISA EDITH HAPPY</h4>
+         <p>Surveyor</p>
+       </div>   
+
+       <div className="team-member">
+         <img src={alvin} className="team-member-img" alt=""/>
+         <h4>ARIMPA PENLOPE</h4>
+         <p>Surveyor</p>
+       </div> 
+
+       <div className="team-member">
          <img src={shyaka01} className="team-member-img" alt=""/>
          <h4>SHYAKA THIERY</h4>
          <p>Surveyor</p>
