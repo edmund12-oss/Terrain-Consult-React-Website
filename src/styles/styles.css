@@ -780,7 +780,7 @@
   
 }
 
- @media (max-width: 1199px) {
+ @media (max-width: 992px) {
   .about-home-item img{
     width: 365px;
     height: 300px;
@@ -799,10 +799,6 @@
     font-size: 16px;
   }
 
-    
-
-
-  
 }
 
 
@@ -823,11 +819,11 @@
     font-size: 25px;
   }
 
-  .about-home-item p{
+  .about-home-item p {
     color: color-mix(in srgb, var(--default-color), transparent 25%);
     line-height: 1.5;
     margin-bottom: 45px;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .about-home-item i {
