@@ -88,11 +88,13 @@ function Homepage() {
             {isActive && (
                 <div className="hamburgher-links">
                     {/*<button className="hamburgher-close-btn" onClick={() => setIsActive(false)}>BTNX</button>*/}
+                 <div className="hamburgher-links-header">
                      <Link to="/">
                      <img src={terrainlogo} className="terrain-icon" alt="Company Logo"></img>
                      <img src={terraintitlenew} className="terrain-icon2" alt="Company Name"></img> 
                     </Link>
                     <i className='navx fa fa-times' aria-hidden="true" onClick={() => setIsActive(false)}></i>
+                </div>
                     <ul>
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/ About">About</Link></li>
