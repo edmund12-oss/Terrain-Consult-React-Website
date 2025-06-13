@@ -323,13 +323,13 @@
     }
 
     .hamburgher-links ul li+li {
-      margin-top: 8px;
+      margin-top: 20px;
     }
 
     .hamburgher-links ul li a {
       color: var(--default-color);
       font-weight: 700;
-      font-size: 30px;
+      font-size: 35px;
       border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
     }
 
