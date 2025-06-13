@@ -319,6 +319,7 @@
 
     .hamburgher-links ul {
       list-style: none;
+      margin-top: 100px;
     }
 
     .hamburgher-links ul li+li {
@@ -328,6 +329,8 @@
     .hamburgher-links ul li a {
       color: var(--default-color);
       font-weight: 700;
+      font-size: 30px;
+      border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
     }
 
     .hamburgher-links ul li a:hover {
