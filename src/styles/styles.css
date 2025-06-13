@@ -762,6 +762,13 @@
     width: 470px;
   }
 
+  .about-home-item p {
+    color: color-mix(in srgb, var(--default-color), transparent 25%);
+    line-height: 1.5;
+    margin-bottom: 45px;
+    font-size: 18px;
+  }
+
  
     @media (min-width: 992px) {
   .about-home-item img{
@@ -791,13 +798,17 @@
     transition: opacity 0.5s ease-in-out;
   }
      
+ .about-home-item p {
+    color: color-mix(in srgb, var(--default-color), transparent 25%);
+    line-height: 1.5;
+    margin-bottom: 45px;
+    font-size: 16px;
+  }
+     
   .about-home-page {
     gap: 50px;  
   }
 
-  .about-home-item p {
-    font-size: 18px;
-  }
      
 }
 
@@ -817,13 +828,6 @@
     padding: 8px;
     font-weight: 700;
     font-size: 25px;
-  }
-
-  .about-home-item p {
-    color: color-mix(in srgb, var(--default-color), transparent 25%);
-    line-height: 1.5;
-    margin-bottom: 45px;
-    font-size: 16px;
   }
 
   .about-home-item i {
