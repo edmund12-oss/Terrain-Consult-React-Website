@@ -1019,15 +1019,26 @@
     transition: all ease-in-out 0.4s;
     line-height: 1.5;
   }
+
+  .about-html-content p {
+    color: color-mix(in srgb, var(--default-color), transparent 25%);
+    line-height: 1.5;
+    text-align: justify;
+    font-size: 18px;
+  }
   
   @media (max-width: 992px) {
     .about-html-container {
       margin: 0px 15px 0px 15px;
     }
 
-    .about-html-content p {
-      font-size: 16px;
-    }
+  .about-html-content p {
+    color: color-mix(in srgb, var(--default-color), transparent 25%);
+    line-height: 1.5;
+    text-align: justify;
+    font-size: 16px;
+  }
+      
   }
   
   .about-html-content {
@@ -1041,13 +1052,7 @@
     justify-content: center;
     text-align: center;
   }
-    
-  .about-html-content p {
-    color: color-mix(in srgb, var(--default-color), transparent 25%);
-    line-height: 1.5;
-    text-align: justify;
-    font-size: 18px;
-  }
+
 
   .about-html-content span {
     color: color-mix(in srgb, var(--default-color), transparent 25%);
