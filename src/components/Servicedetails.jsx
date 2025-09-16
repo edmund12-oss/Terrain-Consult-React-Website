@@ -46,11 +46,11 @@ const Servicedetails = () => {
                 <div className="hamburgher-links">
                     {/*<button className="hamburgher-close-btn" onClick={() => setIsActive(false)}>BTNX</button>*/}
                     <i className='navx fa fa-times' aria-hidden="true" onClick={() => setIsActive(false)}></i>
-                    <ul>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/ About">About</Link></li>
-                        <li><Link to="/ Services">Services</Link></li>
-                        <li><Link to="/ Projects">Projects</Link></li>
+                    <ul className="hamburgher-box">
+                        <li><Link to="/">HOME <i class="fa fa-caret-right" aria-hidden="true"></i></Link></li>
+                        <li><Link to="/ About">ABOUT <i class="fa fa-caret-right" aria-hidden="true"></i></Link></li>
+                        <li><Link to="/ Services">SERVICES <i class="fa fa-caret-right" aria-hidden="true"></i></Link></li>
+                        <li><Link to="/ Projects">PROJECTS <i class="fa fa-caret-right" aria-hidden="true"></i></Link></li>
                     </ul>
                 </div>
             )

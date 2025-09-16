@@ -27,7 +27,7 @@ import erina01 from "../assets/erina01.jpg"
 import ronald01 from "../assets/ronald01.JPG"
 import wyclef01 from "../assets/wyclef01.JPG"
 import lule from "../assets/lule.jpeg"
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import img_rt_23_one from "../assets/rt_23_one.JPG"
 import img_rt_23_two from "../assets/rt_23_two.JPG"
 import img_rt_23_three from "../assets/rt_23_three.JPG"
@@ -36,45 +36,50 @@ import img_rt_24_two from "../assets/rt_24_two.JPG"
 import img_rt_24_three from "../assets/rt_24_three.JPG"
 import happy01 from "../assets/HAPPY.png"
 import pennie01 from "../assets/PENNIE.jpg"
+import { motion, useMotionValue } from "framer-motion";
 
 const Aboutpage = () => {
 
 
-  const images = [
-    img_rt_23_three,
-    img_rt_23_two,
-    img_rt_23_one,
-  ];
-
-  const images_23 = [
-    img_rt_24_one,
-    img_rt_24_two,
-    img_rt_24_three,
-    ];
-
+  const [imgWidth, setImgWidth] = useState(0);
+  const x = useMotionValue(0);
+  const imgRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [currentNumber, setCurrentNumber] = useState(0);
 
-  function nextBtn() {
-    setCurrentNumber((prevNumber) => 
-      prevNumber === images_23.length - 1 ? 0 : prevNumber + 1
-    );
-  };
+  useEffect(() => {
+    if(imgRef.current) {
+      setImgWidth(imgRef.current.offsetWidth)
+    }
 
-  function prevBtn() {
-    setCurrentNumber((prevNumber) =>
-    prevNumber === 0 ? images.length - 1 : prevNumber - 1
-    );
-  };
+    function handleResize() {
+       if(imgRef.current) {
+      setImgWidth(imgRef.current.offsetWidth)
+    }
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [])
+
+const gap = 25;
+const horizontalOffsetDistance = gap + imgWidth;
 
   function handleNext() {
-    setCurrentIndex((prevIndex) => 
-    prevIndex === images.length - 1 ? 0 : prevIndex + 1 );
+   if(currentIndex === 2) {
+    setCurrentIndex(2);
+   }
+   else {
+    setCurrentIndex(currentIndex + 1);
+   }
   };
 
   function handlePrevious() {
-    setCurrentIndex((prevIndex) => 
-    prevIndex === 0 ? images.length - 1 : prevIndex - 1);
+    if(currentIndex === 0) {
+      setCurrentIndex(0);
+    }
+    else {
+      setCurrentIndex(currentIndex - 1);
+    }
   };
 
 
@@ -119,11 +124,11 @@ const Aboutpage = () => {
                 <div className="hamburgher-links">
                     {/*<button className="hamburgher-close-btn" onClick={() => setIsActive(false)}>BTNX</button>*/}
                     <i className='navx fa fa-times' aria-hidden="true" onClick={() => setIsActive(false)}></i>
-                    <ul>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/ About">About</Link></li>
-                        <li><Link to="/ Services">Services</Link></li>
-                        <li><Link to="/ Projects">Projects</Link></li>
+                    <ul className="hamburgher-box">
+                        <li><Link to="/">HOME <i class="fa fa-caret-right" aria-hidden="true"></i></Link></li>
+                        <li><Link to="/ About">ABOUT <i class="fa fa-caret-right" aria-hidden="true"></i></Link></li>
+                        <li><Link to="/ Services">SERVICES <i class="fa fa-caret-right" aria-hidden="true"></i></Link></li>
+                        <li><Link to="/ Projects">PROJECTS <i class="fa fa-caret-right" aria-hidden="true"></i></Link></li>
                     </ul>
                 </div>
             )
@@ -200,7 +205,6 @@ const Aboutpage = () => {
 
                     <div className="about-html-container">
                         <div className="about-html-content">
-                            <h3></h3>
                             <p>As a usual culture at the end of every year, we get together as Terrain Consult staff to have a dedicated time for team building inclusive of vast activities such as sports, indoor games and many more. This enhances the spirit of teamwork amongst us which improves the efficiency when executing projects. It has always been a pleasure serving you and we believe more efficiency in project execution shall be achieved in this new year. Happy New Year.</p>
                         </div>
                     </div>
@@ -208,15 +212,36 @@ const Aboutpage = () => {
                 <div className="team-activities">
                   <h3>Retreat- <span style={{color: "#ff4a17"}}>2023</span></h3>
                   <div className="team-activity">
-                  <i  className="fa fa-chevron-circle-left" aria-hidden="true" onClick={handlePrevious}></i>
-                  <img src={images[currentIndex]}></img>
-                  <i  className="fa fa-chevron-circle-right" aria-hidden="true" onClick={handleNext}></i>
+                     <button onClick={handlePrevious} className="switch-arrow"><i  className="fa fa-chevron-circle-left" aria-hidden="true"></i></button>
+                    <div className="team-activity-carousel-container">
+                      <motion.div 
+                      className="team-activity-carousel"
+                      animate={{x: -(currentIndex * horizontalOffsetDistance)}}
+                      transition={{type: "spring", stiffness: 20}}
+                      >
+                       <img src={img_rt_23_three} alt="" ref={imgRef}></img>
+                       <img src={img_rt_23_two} alt=""></img>
+                       <img src={img_rt_23_one} alt=""></img>
+                      </motion.div>
+                    </div>
+                  <button  onClick={handleNext} className="switch-arrow"><i  className="fa fa-chevron-circle-right" aria-hidden="true"></i></button>
                   </div>
+
                   <h3>Retreat-<span style={{color: "#ff4a17"}}>2024</span></h3>
                   <div className="team-activity">
-                  <i  className="fa fa-chevron-circle-left" aria-hidden="true" onClick={prevBtn}></i>
-                  <img src={images_23[currentNumber]}></img>
-                  <i  className="fa fa-chevron-circle-right" aria-hidden="true" onClick={nextBtn}></i>
+                    <button onClick={handlePrevious} className="switch-arrow"><i  className="fa fa-chevron-circle-left" aria-hidden="true"></i></button>
+                    <div className="team-activity-carousel-container">
+                      <motion.div
+                      className="team-activity-carousel"
+                      animate={{x: -(currentIndex * horizontalOffsetDistance)}}
+                      transition={{type: "spring", stiffness: 20}}
+                       >
+                       <img src={img_rt_24_one} alt=""></img>
+                       <img src={img_rt_24_two} alt=""></img>
+                       <img src={img_rt_24_three} alt=""></img>
+                      </motion.div>
+                    </div>
+                  <button  onClick={handleNext} className="switch-arrow"><i  className="fa fa-chevron-circle-right" aria-hidden="true"></i></button>
                   </div>
                 </div>
             </section>

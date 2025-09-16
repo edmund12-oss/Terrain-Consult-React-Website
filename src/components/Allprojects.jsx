@@ -58,11 +58,11 @@ const Allprojects = () => {
                 <div className="hamburgher-links">
                     {/*<button className="hamburgher-close-btn" onClick={() => setIsActive(false)}>BTNX</button>*/}
                     <i className='navx fa fa-times' aria-hidden="true" onClick={() => setIsActive(false)}></i>
-                    <ul>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/ About">About</Link></li>
-                        <li><Link to="/ Services">Services</Link></li>
-                        <li><Link to="/ Projects">Projects</Link></li>
+                    <ul className="hamburgher-box">
+                        <li><Link to="/">HOME <i class="fa fa-caret-right" aria-hidden="true"></i></Link></li>
+                        <li><Link to="/ About">ABOUT <i class="fa fa-caret-right" aria-hidden="true"></i></Link></li>
+                        <li><Link to="/ Services">SERVICES <i class="fa fa-caret-right" aria-hidden="true"></i></Link></li>
+                        <li><Link to="/ Projects">PROJECTS <i class="fa fa-caret-right" aria-hidden="true"></i></Link></li>
                     </ul>
                 </div>
             )
@@ -91,142 +91,132 @@ const Allprojects = () => {
 
           <div className="projects">
                 <div className="project-element">
-                    <img src={slaac1} className="projects-img" />
+                    <img src={slaac1} className="projects-img" alt="" />
                     <div className="text-block">CADASTRAL SURVEYING</div>
-                    <h4>Systematic Land Adjudication And Certification (SLAAC) Project</h4>
                     <div className="project-location-year">
-                      <div className="location">
-                      <p><i className="fa fa-map-pin" aria-hidden="true"></i> Sheema, Uganda</p>
-                      </div>
-                      <div className="year">
-                      <p><i className="fa fa-calendar" aria-hidden="true"></i> 2024</p>
-                      </div>
+                       <p>Sheema, Uganda</p>
+                       <p><i className="fa fa-asterisk"></i></p>
+                       <p>2024</p>
+                    </div>
+                    <div className="project-title">
+                        <h4><i class="fa fa-cog"></i> Systematic Land Adjudication And Certification (SLAAC) Project</h4>
                     </div>
                 </div>
 
                 <div className="project-element">
-                    <img src={eryong_shyaka} className="projects-img" />
+                    <img src={eryong_shyaka} className="recent-projects-img" />
                     <div className="text-block">CADASTRAL SURVEYING</div>
-                    <h4>Boundary opening survey of NARO land and emplacement of pillars</h4>
                     <div className="project-location-year">
-                      <div className="location">
-                      <p><i className="fa fa-map-pin" aria-hidden="true"></i> Apac, Uganda</p>
-                      </div>
-                      <div className="year">
-                      <p><i className="fa fa-calendar" aria-hidden="true"></i> 2022</p>
-                      </div>
+                       <p>Apac, Uganda</p>
+                       <p><i className="fa fa-asterisk"></i></p>
+                       <p>2022</p>
+                    </div>
+                    <div className="project-title">
+                        <h4><i class="fa fa-cog"></i> Boundary opening survey of NARO land and emplacement of pillars</h4>
                     </div>
                 </div>
 
                 <div className="project-element">
-                    <img src={building} className="projects-img" />
+                    <img src={building} className="projects-img" alt=""/>
                     <div className="text-block">ENGINEERING SURVEYING</div>
-                    <h4>Consultancy services for surveying of N.S.S.F lubowa Housing project land under Seyani Brothers’ Ltd at Lubowa</h4>
                     <div className="project-location-year">
-                      <div className="location">
-                      <p><i className="fa fa-map-pin" aria-hidden="true"></i> Lubowa, Uganda</p>
-                      </div>
-                      <div className="year">
-                      <p><i className="fa fa-calendar" aria-hidden="true"></i> 2019</p>
-                      </div>
+                       <p>Lubowa, Uganda</p>
+                       <p><i className="fa fa-asterisk"></i></p>
+                       <p>2019</p>
+                    </div>
+                    <div className="project-title">
+                        <h4><i class="fa fa-cog"></i> Consultancy services for surveying of N.S.S.F lubowa Housing project land under Seyani Brothers’ Ltd at Lubowa</h4>
                     </div>
                 </div>
 
                 <div className="project-element">
-                    <img src={hoima} className="projects-img" />
+                    <img src={hoima} className="projects-img" alt=""/>
                     <div className="text-block">CADASTRAL SURVEYING</div>
-                    <h4>Re-settlement Action Plan and Land Acquisition for land for the Hoima – Mityana Oil Pipeline</h4>
                     <div className="project-location-year">
-                      <div className="location">
-                      <p><i className="fa fa-map-pin" aria-hidden="true"></i> Hoima, Uganda</p>
-                      </div>
-                      <div className="year">
-                      <p><i className="fa fa-calendar" aria-hidden="true"></i> 2016</p>
-                      </div>
+                       <p>Hoima, Uganda</p>
+                       <p><i className="fa fa-asterisk"></i></p>
+                       <p>2016</p>
+                    </div>
+                    <div className="project-title">
+                        <h4><i class="fa fa-cog"></i> Re-settlement Action Plan and Land Acquisition for land for the Hoima – Mityana Oil Pipeline</h4>
                     </div>
                 </div>
 
                 <div className="project-element">
-                    <img src={totalstation} className="projects-img" />
+                    <img src={totalstation} className="projects-img" alt=""/>
                     <div className="text-block">CADASTRAL & ENGINEERING SURVEYING</div>
-                    <h4>Topographic survey and boundary opening of 23 sites for Land Offices under the Private Sector Foundation</h4>
                     <div className="project-location-year">
-                      <div className="location">
-                      <p><i className="fa fa-map-pin" aria-hidden="true"></i> Not Specified</p>
-                      </div>
-                      <div className="year">
-                      <p><i className="fa fa-calendar" aria-hidden="true"></i> 2015</p>
-                      </div>
+                       <p>Not Specified</p>
+                       <p><i className="fa fa-asterisk"></i></p>
+                       <p>2015</p>
+                    </div>
+                    <div className="project-title">
+                        <h4><i class="fa fa-cog"></i> Topographic survey and boundary opening of 23 sites for Land Offices under the Private Sector Foundation</h4>
                     </div>
                 </div>
 
                 <div className="project-element">
-                    <img src={ntungamo} className="projects-img" />
+                    <img src={ntungamo} className="projects-img" alt=""/>
                     <div className="text-block">ENVIRONMENTAL CONSULTANCY</div>
-                    <h4>Design reconstruction and training supplies supervision at four technical institutes</h4>
                     <div className="project-location-year">
-                    <div className="location">
-                      <p><i className="fa fa-map-pin" aria-hidden="true"></i> Agago, Ntungamo, Kayunga, Tororo</p>
-                      </div>
-                      <div className="year">
-                      <p><i className="fa fa-calendar" aria-hidden="true"></i> 2015</p>
-                      </div>
+                       <p>Agago, Ntungamo, Kayunga, Tororo</p>
+                       <p><i className="fa fa-asterisk"></i></p>
+                       <p>2015</p>
+                    </div>
+                    <div className="project-title">
+                        <h4><i class="fa fa-cog"></i> Design reconstruction and training supplies supervision at four technical institutes</h4>
                     </div>
                 </div>
 
                 <div className="project-element">
-                    <img src={topo} className="projects-img" />
+                    <img src={topo} className="projects-img" alt=""/>
                     <div className="text-block">ENGINEERING & CADASTRAL SURVEYING</div>
-                    <h4>Topographic and cadastral project and feasibility studies of 10 Hydropower  Dams</h4>
                     <div className="project-location-year">
-                      <div className="location">
-                      <p><i className="fa fa-map-pin" aria-hidden="true"></i> Kabarole, Kasese, Rukangizi, Mitoona</p>
-                      </div>
-                      <div className="year">
-                      <p><i className="fa fa-calendar" aria-hidden="true"></i> 2014</p>
-                      </div>
+                       <p>Kabarole, Kasese, Rukangizi, Mitoona</p>
+                       <p><i className="fa fa-asterisk"></i></p>
+                       <p>2014</p>
+                    </div>
+                    <div className="project-title">
+                        <h4><i class="fa fa-cog"></i> Topographic and cadastral project and feasibility studies of 10 Hydropower  Dams</h4>
                     </div>
                 </div>
 
                 <div className="project-element">
-                    <img src={saudi} className="projects-img" />
+                    <img src={saudi} className="projects-img" alt=""/>
                     <div className="text-block">CADASTRAL SURVEYING</div>
-                    <h4>Boundary opening and detailed topographic survey for plot 7 Kololo Hill Road for the Royal Saudi Embassy</h4>
                     <div className="project-location-year">
-                      <div className="location">
-                      <p><i className="fa fa-map-pin" aria-hidden="true"></i> Kololo</p>
-                      </div>
-                      <div className="year">
-                      <p><i className="fa fa-calendar" aria-hidden="true"></i> 2011</p>
-                      </div>
+                       <p>Kololo</p>
+                       <p><i className="fa fa-asterisk"></i></p>
+                       <p>2011</p>
+                    </div>
+                    <div className="project-title">
+                        <h4><i class="fa fa-cog"></i> Boundary opening and detailed topographic survey for plot 7 Kololo Hill Road for the Royal Saudi Embassy</h4>
                     </div>
                 </div>
 
                 <div className="project-element">
-                    <img src={arua} className="projects-img" />
+                    <img src={arua} className="projects-img" alt=""/>
                     <div className="text-block">CADASTRAL SURVEYING</div>
-                    <h4>Land acquisition for road construction for Vurra-Arua-Koboko-Oraba road (93km) for UNRA</h4>
                     <div className="project-location-year">
-                      <div className="location">
-                      <p><i className="fa fa-map-pin" aria-hidden="true"></i> Arua, Koboko, Oraba</p>
-                      </div>
-                      <div className="year">
-                      <p><i className="fa fa-calendar" aria-hidden="true"></i> 2011</p>
-                      </div>
+                       <p>Arua, Koboko, Oraba</p>
+                       <p><i className="fa fa-asterisk"></i></p>
+                       <p>2011</p>
+                    </div>
+                    <div className="project-title">
+                        <h4><i class="fa fa-cog"></i> Land acquisition for road construction for Vurra-Arua-Koboko-Oraba road (93km) for UNRA</h4>
                     </div>
                 </div>
 
                 <div className="project-element">
-                    <img src={mtn} className="projects-img" />
+                    <img src={mtn} className="projects-img" alt=""/>
                     <div className="text-block">CADASTRAL SURVEYING</div>
-                    <h4>Site acquisition/Processing of various land titles for MTN mast sites</h4>
                     <div className="project-location-year">
-                      <div className="location">
-                      <p><i className="fa fa-map-pin" aria-hidden="true"></i> Kampala, Uganda</p>
-                      </div>
-                      <div className="year">
-                      <p><i className="fa fa-calendar" aria-hidden="true"></i> 2009</p>
-                      </div>
+                       <p>Kampala, Uganda</p>
+                       <p><i className="fa fa-asterisk"></i></p>
+                       <p>2009</p>
+                    </div>
+                    <div className="project-title">
+                        <h4><i class="fa fa-cog"></i> Site acquisition/Processing of various land titles for MTN mast sites</h4>
                     </div>
                 </div>
           </div>

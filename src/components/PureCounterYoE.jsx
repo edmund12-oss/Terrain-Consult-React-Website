@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
-import { data, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function PureCounterYoE() {
     const location = useLocation();

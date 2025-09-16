@@ -17,11 +17,17 @@ import imgtwo from "../assets/img_two.JPG"
 import imgthree from "../assets/img_three.JPG"
 import imgfour from "../assets/img_four.jpg"
 import { useState } from "react";
+import { useRef, useEffect } from "react";
+import RecentEventsCarousel from "./RecentEventsCarousel";
+import ubc from "../assets/ubc.png";
+import { motion, useMotionValue } from "framer-motion";
+
 
 
 function Homepage() {
 
     const [isActive, setIsActive] = useState(false);
+    const [imgWidth, setImgWidth] = useState(0);
 
     function toggleMenu() {
        setIsActive(!isActive);
@@ -31,25 +37,45 @@ function Homepage() {
         window.scrollTo(0,0);
     }
 
-    const images = [
-        imgone,
-        imgtwo,
-        imgthree,
-        imgfour,
-    ];
-
     const [currentIndex, setCurrentIndex] = useState(0);
+    const x = useMotionValue(0);
+    const imgRef = useRef(null);
 
-    function handleNext() {
-        setCurrentIndex((prevIndex) =>
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1
-        );
-    };
+    useEffect(() => {
+      if(imgRef.current) {
+        setImgWidth(imgRef.current.offsetWidth);
+      }
+
+      function handleResize() {
+     if(imgRef.current) {
+        setImgWidth(imgRef.current.offsetWidth);
+      }
+      }
+
+      window.addEventListener("resize", handleResize);
+      return () =>  window.removeEventListener("resize", handleResize);
+    }, []);
+
+    const gap = 25;
+    const horizontalOffsetDistance = gap + imgWidth;
+
 
     function handlePrev() {
-        setCurrentIndex((prevIndex) =>
-        prevIndex === 0 ? images.length - 1 : prevIndex - 1
-        );
+        if(currentIndex === 0) {
+            setCurrentIndex(0);
+        }
+        else {
+            setCurrentIndex(currentIndex - 1);
+        }
+    }
+
+    function handleNext() {
+       if (currentIndex === 3) {
+        setCurrentIndex(3);
+       }
+       else {
+        setCurrentIndex(currentIndex + 1);
+       }
     }
 
     const [isOpen, setIsOpen] = useState("mission-event");
@@ -89,11 +115,11 @@ function Homepage() {
                 <div className="hamburgher-links">
                     {/*<button className="hamburgher-close-btn" onClick={() => setIsActive(false)}>BTNX</button>*/}
                     <i className='navx fa fa-times' aria-hidden="true" onClick={() => setIsActive(false)}></i>
-                    <ul>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/ About">About</Link></li>
-                        <li><Link to="/ Services">Services</Link></li>
-                        <li><Link to="/ Projects">Projects</Link></li>
+                    <ul className="hamburgher-box">
+                        <li><Link to="/">HOME <i class="fa fa-caret-right" aria-hidden="true"></i></Link></li>
+                        <li><Link to="/ About">ABOUT <i class="fa fa-caret-right" aria-hidden="true"></i></Link></li>
+                        <li><Link to="/ Services">SERVICES <i class="fa fa-caret-right" aria-hidden="true"></i></Link></li>
+                        <li><Link to="/ Projects">PROJECTS <i class="fa fa-caret-right" aria-hidden="true"></i></Link></li>
                     </ul>
                 </div>
             )
@@ -145,18 +171,33 @@ function Homepage() {
                 </div>
                 <div className="about-home-page" data-aos="fade-up">
                     <div className="about-home-item">
-                        <img src={images[currentIndex]}></img>
-                        <div className="slide-icons">
-                        <i className="fa fa-chevron-circle-left" aria-hidden="true" onClick={handlePrev}></i>
-                        <i className="fa fa-chevron-circle-right" aria-hidden="true" onClick={handleNext}></i>
-                        </div>
+                      <div className="about-home-image-carousel-container">
+                        <motion.div 
+                        className="about-home-image-carousel"
+                        animate={{x: -(currentIndex * horizontalOffsetDistance)}}
+                        transition={{type: "spring", stiffness: 20}}
+                        >
+                          <img src={imgone} alt="Terrain Consult Partners" ref={imgRef}></img>
+                          <img src={imgtwo} alt="Terrain Consult Partners"></img>
+                          <img src={imgthree} alt="Terrain Consult Partners"></img>
+                          <img src={imgfour} alt="Terrain Consult Partners"></img>
+                        </motion.div>
+                       </div>
+                    <div className="slide-icons">
+                     <button  onClick={handlePrev} className="switch-arrow"><i className="fa fa-chevron-circle-left" aria-hidden="true"></i></button>
+                     <button  onClick={handleNext} className="switch-arrow"><i className="fa fa-chevron-circle-right" aria-hidden="true"></i></button>
                     </div>
-                    <div className="about-home-item balance">
+                    </div>
+                    <div className="about-home-item-two balance">
                         <h3><i className="fa fa-info-circle" aria-hidden="true"></i> About Terrain Consult</h3>
                         <p>Terrain Consult is a professional consultancy, registered as a partnership in Uganda offering Engineering and Cadastral surveying services, planning and Environmental consultancy services, geographical information sysyems services and analysis established on 16th December, 2003.</p>
                         <Link to="/ About" className="about-home-button">Read more</Link>
                     </div>
                 </div>
+              
+                    
+               
+                
 
 
                 {/* Mission, Vision, and Objective*/}
@@ -199,6 +240,9 @@ function Homepage() {
                 }
             </section>
            
+           <section>
+            <RecentEventsCarousel />
+           </section>
 
             <section>
                 <div className="section-title" data-aos="fade-up">
@@ -300,6 +344,10 @@ function Homepage() {
                     <div className="client-item">
                         <img src={unra} alt="Uganda National Roads Authority logo"></img>
                     </div>
+
+                    <div className="client-item">
+                        <img src={ubc} alt="Uganda Broadcasting Cooperation"></img>
+                    </div>
                 </div>
 
 
@@ -318,20 +366,26 @@ function Homepage() {
                 <div className="recent-project">
                     <img src={slaac1} className="recent-projects-img" />
                     <div className="text-block">CADASTRAL SURVEYING</div>
-                    <h4>Systematic Land Adjudication And Certification (SLAAC) Project</h4>
                     <div className="project-location-year">
-                    <p><i className="fa fa-map-pin" aria-hidden="true"></i> Sheema, Uganda</p>
-                    <p><i className="fa fa-calendar" aria-hidden="true"></i> 2024</p>
+                       <p>Sheema, Uganda</p>
+                       <p><i className="fa fa-asterisk"></i></p>
+                       <p>2024</p>
+                    </div>
+                    <div className="project-title">
+                        <h4><i class="fa fa-cog"></i> Systematic Land Adjudication And Certification (SLAAC) Project</h4>
                     </div>
                 </div>
 
                 <div className="recent-project">
                     <img src={eryong_shyaka} className="recent-projects-img" />
                     <div className="text-block">CADASTRAL SURVEYING</div>
-                    <h4>Boundary opening survey of NARO land and emplacement of pillars</h4>
                     <div className="project-location-year">
-                    <p><i className="fa fa-map-pin" aria-hidden="true"></i> Apac, Uganda</p>
-                    <p><i className="fa fa-calendar" aria-hidden="true"></i> 2022</p>
+                       <p>Apac, Uganda</p>
+                       <p><i className="fa fa-asterisk"></i></p>
+                       <p>2022</p>
+                    </div>
+                    <div className="project-title">
+                        <h4><i class="fa fa-cog"></i> Boundary opening survey of NARO land and emplacement of pillars</h4>
                     </div>
                 </div>
                 <Link to="/ Projects">
