@@ -109,6 +109,8 @@
   # Global Header
   --------------------------------------------------------------*/
   .header {
+    position: fixed;
+    top: 0;
     color: var(--default-color);
     background-color: var(--background-color);
     padding: 20px 0;
