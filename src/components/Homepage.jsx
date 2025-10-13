@@ -21,6 +21,7 @@ import { useRef, useEffect } from "react";
 import RecentEventsCarousel from "./RecentEventsCarousel";
 import ubc from "../assets/ubc.png";
 import { motion, useMotionValue } from "framer-motion";
+import uetcl from "../assets/UETCL.jpg";
 
 
 
@@ -347,6 +348,10 @@ function Homepage() {
 
                     <div className="client-item">
                         <img src={ubc} alt="Uganda Broadcasting Cooperation"></img>
+                    </div>
+
+                    <div className="client-item">
+                        <img src={uetcl} alt="Uganda Electricity Transmission Company Limited"></img>
                     </div>
                 </div>
 
