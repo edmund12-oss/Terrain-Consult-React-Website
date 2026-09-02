@@ -67,6 +67,15 @@ function handlePrevButton() {
                   className="recent-events"
                   animate={{x: -(currentIndex * horizontalOffsetDistance)}}
                   transition={{type: "spring", stiffness: 15, damping: 5}}>
+
+                    <div className="recent-event">
+                      <div className="recent-event-element">
+                        <img src={internsmeeting} alt=""></img>
+                      <h3 className="text-box-title">Survnet Training</h3>
+                      </div>
+                      <p>This was a two day training held at the main office of survnet with the aim of advancing the knowlegde and competence of the staff at terrain consult.</p>
+                    </div>
+                    
                     <div className="recent-event" ref={recentEventRef} >
                       <div className="recent-event-element">
                         <img src={hoimameeting} alt=""></img>
@@ -78,7 +87,7 @@ function handlePrevButton() {
                     <div className="recent-event">
                       <div className="recent-event-element">
                         <img src={internsmeeting} alt=""></img>
-                      <h3 className="text-box-title">Interns Orientation</h3>
+                      <h3 className="text-box-title">Interns Orientation 2025</h3>
                       </div>
                       <p>This meeting was held at Hotel Triangle in Kampala Central. The main purpose of this meeting was to brief the interns in regards to what is expected of them and to introduce them to the members of staff.</p>
                     </div>
