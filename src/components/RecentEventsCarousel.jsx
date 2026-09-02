@@ -6,6 +6,7 @@ import { useState, useEffect, useRef } from "react";
 import hoimameeting from "../assets/hoima-meeting.jpeg"
 import internsmeeting from "../assets/interns-meeting.jpeg"
 import survnettraining from "../assets/survnet.jpeg"
+import closeofinternship from "../assets/internship26"
 
 
 
@@ -68,6 +69,14 @@ function handlePrevButton() {
                   className="recent-events"
                   animate={{x: -(currentIndex * horizontalOffsetDistance)}}
                   transition={{type: "spring", stiffness: 15, damping: 5}}>
+
+                    <div className="recent-event">
+                      <div className="recent-event-element">
+                        <img src={closeofinternship} alt=""></img>
+                      <h3 className="text-box-title">Close Of Internship 2026</h3>
+                      </div>
+                      <p>Special guests Dr. Diana Rose Abeho, Dr. Ismail Wadembere, and Miss Akutu Fosca were present at the closing ceremony for the 2026 internship programme and provided career guidance to those finishing their internship and to the staff of terrain consult as well.</p>
+                    </div>
 
                     <div className="recent-event">
                       <div className="recent-event-element">
