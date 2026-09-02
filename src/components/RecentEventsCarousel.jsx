@@ -6,7 +6,7 @@ import { useState, useEffect, useRef } from "react";
 import hoimameeting from "../assets/hoima-meeting.jpeg"
 import internsmeeting from "../assets/interns-meeting.jpeg"
 import survnettraining from "../assets/survnet.jpeg"
-import closeofinternship from "../assets/internship26"
+import closeofinternship from "../assets/internship26.jpeg"
 
 
 
