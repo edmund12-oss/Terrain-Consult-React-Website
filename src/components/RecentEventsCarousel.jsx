@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from "react";
 
 import hoimameeting from "../assets/hoima-meeting.jpeg"
 import internsmeeting from "../assets/interns-meeting.jpeg"
+import survnettraining from "../assets/survnet.jpeg"
 
 
 
@@ -70,7 +71,7 @@ function handlePrevButton() {
 
                     <div className="recent-event">
                       <div className="recent-event-element">
-                        <img src={internsmeeting} alt=""></img>
+                        <img src={survnettraining} alt=""></img>
                       <h3 className="text-box-title">Survnet Training</h3>
                       </div>
                       <p>This was a two day training held at the main office of survnet with the aim of advancing the knowlegde and competence of the staff at terrain consult.</p>
