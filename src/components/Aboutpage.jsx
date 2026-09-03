@@ -42,7 +42,6 @@ const Aboutpage = () => {
 
 
   const [imgWidth, setImgWidth] = useState(0);
-  const x = useMotionValue(0);
   const imgRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -258,7 +257,6 @@ const horizontalOffsetDistance = gap + imgWidth;
 
                     <div className="about-html-container">
                         <div className="about-html-content">
-                            <h3></h3>
                             <p>i.	Practicing  Certificate </p>
                             <p>ii. Certificate of Registration </p>
                             <p>iii. VAT Registration Certificate  </p>
@@ -280,7 +278,6 @@ const horizontalOffsetDistance = gap + imgWidth;
                     <div className="about-html-container">
 
                         <div className="about-html-content">
-                            <h3></h3>
                             <p>The main staff involved in executing consultancy services fall under three categories;</p>
                             <p>1.	Lead Consultants/ Partners</p>
                             <p>2.	Senior Land surveyors</p>
