@@ -39,7 +39,6 @@ function Homepage() {
     }
 
     const [currentIndex, setCurrentIndex] = useState(0);
-    const x = useMotionValue(0);
     const imgRef = useRef(null);
 
     useEffect(() => {
@@ -130,7 +129,7 @@ function Homepage() {
         </div>
    
                     <div className="header-question-icon">
-                        <a href="#contact"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+                        <i href="#contact" class="fa fa-question-circle" aria-hidden="true"></i>
                     </div>
 
                 </div>
@@ -369,7 +368,7 @@ function Homepage() {
             <div className="recent-projects">
 
                 <div className="recent-project">
-                    <img src={slaac1} className="recent-projects-img" />
+                    <img src={slaac1} alt="slaac project image" className="recent-projects-img" />
                     <div className="text-block">CADASTRAL SURVEYING</div>
                     <div className="project-location-year">
                        <p>Sheema, Uganda</p>
@@ -382,7 +381,7 @@ function Homepage() {
                 </div>
 
                 <div className="recent-project">
-                    <img src={eryong_shyaka} className="recent-projects-img" />
+                    <img src={eryong_shyaka} alt="surveyors in field" className="recent-projects-img" />
                     <div className="text-block">CADASTRAL SURVEYING</div>
                     <div className="project-location-year">
                        <p>Apac, Uganda</p>
@@ -413,25 +412,25 @@ function Homepage() {
                         <div className="values-items">
                             <div className="values-item">
                                 <div className="icon"><i className="fa fa-check-square" aria-hidden="true"></i></div>
-                                <h4><a href="" className="stretched-link">Integrity and Professionalism</a></h4>
+                                <h4><a className="stretched-link">Integrity and Professionalism</a></h4>
                                 <p>We are committed to delivering accurate and professional land surveying services with the highest standards of integrity.</p>
                             </div>
                                    
                             <div className="values-item">
                                 <div className="icon"><i className="fa fa-bullseye" aria-hidden="true"></i></div>
-                                <h4><a href="" className="stretched-link">Collaborative and Supportive Teamwork Environment</a></h4>
+                                <h4><a className="stretched-link">Collaborative and Supportive Teamwork Environment</a></h4>
                                 <p>Our team of skilled surveyors work together to provide accurate and efficient land surveying solutions.</p>
                             </div>
                                           
                             <div className="values-item">
                                 <div className="icon"><i class="fa fa-user-circle" aria-hidden="true"></i></div>
-                                <h4><a href="" className="stretched-link">Honest and Transparent business practices</a></h4>
+                                <h4><a className="stretched-link">Honest and Transparent business practices</a></h4>
                                 <p>We prioritise open communication with our clients throughout the surveying process.</p>
                             </div>
                         
                             <div className="values-item">
                                 <div className="icon"><i className="fa fa-thumbs-up" aria-hidden="true"></i></div>
-                                <h4><a href="" className="stretched-link">Customer Focus</a></h4>
+                                <h4><a className="stretched-link">Customer Focus</a></h4>
                                 <p>Our clients are at the heart of everything we do.</p>
                             </div>
                         </div>
@@ -472,7 +471,7 @@ function Homepage() {
                 </div>
             
                 <div className="terrain-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.4393381889141!2d32.575559219430566!3d0.31674599207707427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbbccd96f875d%3A0xf22297c293caef9e!2sAmbassador%20House!5e0!3m2!1sen!2sus!4v1718101143897!5m2!1sen!2sus"></iframe>
+                    <iframe title="Terrain Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.4393381889141!2d32.575559219430566!3d0.31674599207707427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbbccd96f875d%3A0xf22297c293caef9e!2sAmbassador%20House!5e0!3m2!1sen!2sus!4v1718101143897!5m2!1sen!2sus"></iframe>
                 </div>
             <div className="contact-element">
                 <div className="info">
