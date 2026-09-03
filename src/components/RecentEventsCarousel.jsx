@@ -15,7 +15,6 @@ export default function RecentEventsCarousel() {
   
 const [currentIndex, setCurrentIndex] = useState(0);
 const [recentEventWidth, setrecentEventWidth] = useState(0);
-const x = useMotionValue(0);
 const recentEventRef = useRef(null);
 
 useEffect(() => {
