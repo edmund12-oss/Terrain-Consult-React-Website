@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/styles.css";
-import { useMotionValue, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 
 import hoimameeting from "../assets/hoima-meeting.jpeg"
