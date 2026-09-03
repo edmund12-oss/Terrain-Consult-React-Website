@@ -20,7 +20,7 @@ import { useState } from "react";
 import { useRef, useEffect } from "react";
 import RecentEventsCarousel from "./RecentEventsCarousel";
 import ubc from "../assets/ubc.png";
-import { motion, useMotionValue } from "framer-motion";
+import { motion } from "framer-motion";
 import uetcl from "../assets/UETCL.jpg";
 
 
@@ -368,7 +368,7 @@ function Homepage() {
             <div className="recent-projects">
 
                 <div className="recent-project">
-                    <img src={slaac1} alt="slaac project image" className="recent-projects-img" />
+                    <img src={slaac1} alt="slaac project" className="recent-projects-img" />
                     <div className="text-block">CADASTRAL SURVEYING</div>
                     <div className="project-location-year">
                        <p>Sheema, Uganda</p>
@@ -412,25 +412,25 @@ function Homepage() {
                         <div className="values-items">
                             <div className="values-item">
                                 <div className="icon"><i className="fa fa-check-square" aria-hidden="true"></i></div>
-                                <h4><a className="stretched-link">Integrity and Professionalism</a></h4>
+                                <h4>Integrity and Professionalism</h4>
                                 <p>We are committed to delivering accurate and professional land surveying services with the highest standards of integrity.</p>
                             </div>
                                    
                             <div className="values-item">
                                 <div className="icon"><i className="fa fa-bullseye" aria-hidden="true"></i></div>
-                                <h4><a className="stretched-link">Collaborative and Supportive Teamwork Environment</a></h4>
+                                <h4>Collaborative and Supportive Teamwork Environment</h4>
                                 <p>Our team of skilled surveyors work together to provide accurate and efficient land surveying solutions.</p>
                             </div>
                                           
                             <div className="values-item">
                                 <div className="icon"><i class="fa fa-user-circle" aria-hidden="true"></i></div>
-                                <h4><a className="stretched-link">Honest and Transparent business practices</a></h4>
+                                <h4>Honest and Transparent business practices</h4>
                                 <p>We prioritise open communication with our clients throughout the surveying process.</p>
                             </div>
                         
                             <div className="values-item">
                                 <div className="icon"><i className="fa fa-thumbs-up" aria-hidden="true"></i></div>
-                                <h4><a className="stretched-link">Customer Focus</a></h4>
+                                <h4>Customer Focus</h4>
                                 <p>Our clients are at the heart of everything we do.</p>
                             </div>
                         </div>
