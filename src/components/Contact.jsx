@@ -78,7 +78,7 @@ const Contact = () => {
 </div>
 
 <div className="terrain-map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.4393381889141!2d32.575559219430566!3d0.31674599207707427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbbccd96f875d%3A0xf22297c293caef9e!2sAmbassador%20House!5e0!3m2!1sen!2sus!4v1718101143897!5m2!1sen!2sus"></iframe>
+    <iframe title="Terrain Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.4393381889141!2d32.575559219430566!3d0.31674599207707427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbbccd96f875d%3A0xf22297c293caef9e!2sAmbassador%20House!5e0!3m2!1sen!2sus!4v1718101143897!5m2!1sen!2sus"></iframe>
 </div>
 <div className="contact-element">
 <div className="info">
