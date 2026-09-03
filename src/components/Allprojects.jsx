@@ -104,7 +104,7 @@ const Allprojects = () => {
                 </div>
 
                 <div className="project-element">
-                    <img src={eryong_shyaka} className="recent-projects-img" />
+                    <img src={eryong_shyaka} alt="Surveyors in field" className="recent-projects-img" />
                     <div className="text-block">CADASTRAL SURVEYING</div>
                     <div className="project-location-year">
                        <p>Apac, Uganda</p>
