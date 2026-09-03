@@ -61,7 +61,7 @@ const Contact = () => {
         </div>
    
                     <div className="header-question-icon">
-                        <a href="#contact"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+                        <i href="#contact" class="fa fa-question-circle" aria-hidden="true"></i>
                     </div>
 
                 </div>
