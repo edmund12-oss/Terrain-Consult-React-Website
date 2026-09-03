@@ -36,7 +36,7 @@ import img_rt_24_two from "../assets/rt_24_two.JPG"
 import img_rt_24_three from "../assets/rt_24_three.JPG"
 import happy01 from "../assets/HAPPY.png"
 import pennie01 from "../assets/PENNIE.jpg"
-import { motion, useMotionValue } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Aboutpage = () => {
 
