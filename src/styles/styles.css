@@ -58,7 +58,12 @@
   --------------------------------------------------------------*/
   
   
-  
+.home {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  }
   
   body {
     color: color-mix(in srgb, var(--default-color), transparent 0%);
